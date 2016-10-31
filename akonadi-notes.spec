@@ -58,7 +58,7 @@ based on %{name}.
 %{_includedir}/KF5/*_version.h
 %{_libdir}/*.so
 %{_libdir}/cmake/KF5AkonadiNotes/
-%{_qt5_prefix}/mkspecs/modules/*.pri
+%{_libdir}/qt5/mkspecs/modules/*.pri
 
 #--------------------------------------------------------------------
 
