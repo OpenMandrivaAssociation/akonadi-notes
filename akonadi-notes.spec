@@ -26,7 +26,7 @@ Akonadi Notes Integration.
 #--------------------------------------------------------------------
 
 %define major 5
-%define libkname %mklibname KF5AkonadiNotes %{major}
+%define libname %mklibname KF5AkonadiNotes %{major}
 
 %package -n %{libname}
 Summary:      Akonadi Notes Integration main library
