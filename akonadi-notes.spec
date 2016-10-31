@@ -10,6 +10,7 @@ Source0:	http://download.kde.org/stable/applications/%{version}/src/%{name}-%{ve
 BuildRequires:	pkgconfig(Qt5Core)
 BuildRequires:	pkgconfig(Qt5Gui)
 BuildRequires:	pkgconfig(Qt5Xml)
+BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KF5Akonadi) >= 5.3.1
 BuildRequires:	cmake(KF5I18n)
 BuildRequires:	cmake(KF5JobWidgets)
