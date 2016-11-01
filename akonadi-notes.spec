@@ -1,13 +1,12 @@
 Name:		akonadi-notes
 Epoch:		3
 Version:	16.08.2
-Release:	2
+Release:	3
 Summary:	Akonadi Notes Integration
 License:	GPLv2+ and LGPLv2+
 Group:		Graphical desktop/KDE
 URL:		https://www.kde.org/
 Source0:	http://download.kde.org/stable/applications/%{version}/src/%{name}-%{version}.tar.xz
-
 BuildRequires:	pkgconfig(Qt5Core)
 BuildRequires:	pkgconfig(Qt5Gui)
 BuildRequires:	pkgconfig(Qt5Xml)
@@ -32,6 +31,7 @@ Akonadi Notes Integration.
 %package -n %{libname}
 Summary:      Akonadi Notes Integration main library
 Group:        System/Libraries
+Obsoletes:	%{mklibname KF5AkonadiNotes 5} < 3:16.08.2
 
 %description -n %{libname}
 Akonadi Notes Integration main library.
@@ -46,7 +46,6 @@ Akonadi Notes Integration main library.
 %package -n %{develname}
 Summary:        Devel stuff for %{name}
 Group:          Development/KDE and Qt
-Requires:       %{name} = %{EVRD}
 Requires:       %{libname} = %{EVRD}
 
 %description -n %{develname}
