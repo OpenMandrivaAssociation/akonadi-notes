@@ -1,7 +1,7 @@
 Name:		akonadi-notes
 Epoch:		3
-Version:	16.08.2
-Release:	3
+Version:	16.08.3
+Release:	1
 Summary:	Akonadi Notes Integration
 License:	GPLv2+ and LGPLv2+
 Group:		Graphical desktop/KDE
