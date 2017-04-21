@@ -1,6 +1,6 @@
 Name:		akonadi-notes
 Epoch:		3
-Version:	17.03.80
+Version:	17.04.0
 Release:	1
 Summary:	Akonadi Notes Integration
 License:	GPLv2+ and LGPLv2+
@@ -26,18 +26,23 @@ BuildRequires:	cmake(KF5Mime)
 BuildRequires:	cmake(KF5Solid)
 BuildRequires:	boost-devel
 
+%define major 5
+%define libname %mklibname KF5AkonadiNotes %{major}
+
+Requires: %{libname} = %{EVRD}
+
 %description
 Akonadi Notes Integration.
 
-#--------------------------------------------------------------------
+%files -f akonadinotes5.lang
 
-%define major 5
-%define libname %mklibname KF5AkonadiNotes %{major}
+#--------------------------------------------------------------------
 
 %package -n %{libname}
 Summary:      Akonadi Notes Integration main library
 Group:        System/Libraries
 Obsoletes:	%{mklibname KF5AkonadiNotes 5} < 3:16.08.2
+Requires:	%{name} = %{EVRD}
 
 %description -n %{libname}
 Akonadi Notes Integration main library.
@@ -77,3 +82,4 @@ based on %{name}.
 
 %install
 %ninja_install -C build
+%find_lang akonadinotes5
