@@ -1,6 +1,6 @@
 Name:		akonadi-notes
 Epoch:		3
-Version:	17.07.90
+Version:	17.08.0
 Release:	1
 Summary:	Akonadi Notes Integration
 License:	GPLv2+ and LGPLv2+
