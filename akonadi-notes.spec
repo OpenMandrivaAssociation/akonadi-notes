@@ -1,7 +1,7 @@
 Name:		akonadi-notes
 Epoch:		3
-Version:	 18.12.3
-Release:	2
+Version:	 19.04.0
+Release:	1
 Summary:	Akonadi Notes Integration
 License:	GPLv2+ and LGPLv2+
 Group:		Graphical desktop/KDE
