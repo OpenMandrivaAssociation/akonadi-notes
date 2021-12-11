@@ -1,6 +1,6 @@
 Name:		akonadi-notes
 Epoch:		3
-Version:	21.08.3
+Version:	21.12.0
 Release:	1
 Summary:	Akonadi Notes Integration
 License:	GPLv2+ and LGPLv2+
@@ -70,6 +70,7 @@ based on %{name}.
 %{_libdir}/*.so
 %{_libdir}/cmake/KF5AkonadiNotes/
 %{_libdir}/qt5/mkspecs/modules/*.pri
+%doc %{_docdir}/qt5/*.{qch,tags}
 
 #--------------------------------------------------------------------
 
