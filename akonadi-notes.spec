@@ -25,6 +25,9 @@ BuildRequires:	cmake(KF5KDELibs4Support)
 BuildRequires:	cmake(KF5Mime)
 BuildRequires:	cmake(KF5Solid)
 BuildRequires:	boost-devel
+# For QCH format docs
+BuildRequires: doxygen
+BuildRequires: qt5-assistant
 
 %define major 5
 %define libname %mklibname KF5AkonadiNotes %{major}
