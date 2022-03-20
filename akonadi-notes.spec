@@ -1,6 +1,6 @@
 Name:		akonadi-notes
 Epoch:		3
-Version:	21.12.2
+Version:	22.03.80
 Release:	1
 Summary:	Akonadi Notes Integration
 License:	GPLv2+ and LGPLv2+
@@ -67,9 +67,7 @@ This package contains header files needed if you wish to build applications
 based on %{name}.
 
 %files -n %{develname}
-%{_includedir}/KF5/Akonadi/Notes/
-%{_includedir}/KF5/akonadi/notes/
-%{_includedir}/KF5/*_version.h
+%{_includedir}/KF5/AkonadiNotes
 %{_libdir}/*.so
 %{_libdir}/cmake/KF5AkonadiNotes/
 %{_libdir}/qt5/mkspecs/modules/*.pri
