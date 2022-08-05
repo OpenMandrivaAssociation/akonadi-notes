@@ -1,6 +1,6 @@
 Name:		akonadi-notes
 Epoch:		3
-Version:	22.04.3
+Version:	22.07.90
 Release:	1
 Summary:	Akonadi Notes Integration
 License:	GPLv2+ and LGPLv2+
