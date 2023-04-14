@@ -1,7 +1,7 @@
 Name:		akonadi-notes
 Epoch:		3
-Version:	22.12.3
-Release:	2
+Version:	23.03.90
+Release:	1
 Summary:	Akonadi Notes Integration
 License:	GPLv2+ and LGPLv2+
 Group:		Graphical desktop/KDE
@@ -30,7 +30,8 @@ BuildRequires: doxygen
 BuildRequires: qt5-assistant
 
 %define major 5
-%define libname %mklibname KF5AkonadiNotes %{major}
+%define oldlibname %mklibname KF5AkonadiNotes 5
+%define libname %mklibname KPim5AkonadiNotes
 
 Requires: %{libname} = %{EVRD}
 
@@ -46,29 +47,33 @@ Summary:      Akonadi Notes Integration main library
 Group:        System/Libraries
 Obsoletes:	%{mklibname KF5AkonadiNotes 5} < 3:16.08.2
 Requires:	%{name} = %{EVRD}
+%rename %{oldlibname}
 
 %description -n %{libname}
 Akonadi Notes Integration main library.
 
 %files -n %{libname}
-%{_libdir}/libKF5AkonadiNotes.so.%{major}*
+%{_libdir}/libKPim5AkonadiNotes.so.%{major}*
 
 #--------------------------------------------------------------------
 
-%define develname %mklibname KF5AkonadiNotes -d
+%define olddevelname %mklibname KF5AkonadiNotes -d
+%define develname %mklibname KPim5AkonadiNotes -d
 
 %package -n %{develname}
 Summary:        Devel stuff for %{name}
 Group:          Development/KDE and Qt
 Requires:       %{libname} = %{EVRD}
+%rename %{olddevelname}
 
 %description -n %{develname}
 This package contains header files needed if you wish to build applications
 based on %{name}.
 
 %files -n %{develname}
-%{_includedir}/KF5/AkonadiNotes
+%{_includedir}/KPim5/AkonadiNotes
 %{_libdir}/*.so
+%{_libdir}/cmake/KPim5AkonadiNotes/
 %{_libdir}/cmake/KF5AkonadiNotes/
 %{_libdir}/qt5/mkspecs/modules/*.pri
 %doc %{_docdir}/qt5/*.{qch,tags}
@@ -76,7 +81,7 @@ based on %{name}.
 #--------------------------------------------------------------------
 
 %prep
-%setup -q
+%autosetup -p1
 %cmake_kde5
 
 %build
